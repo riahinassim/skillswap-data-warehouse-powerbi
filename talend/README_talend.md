@@ -1,0 +1,1 @@
+Importer via Import Items, puis renseigner le contexte de connexion (hôte, port 5434, base, utilisateur, mot de passe).

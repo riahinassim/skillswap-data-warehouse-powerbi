@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_zSyS4CFlEfGCUJKYBURdlw" name="Base" id="_Ymw8MCFlEfGCUJKYBURdlw" label="Base" dataPackage="_zYTFACFlEfGCUJKYBURdlw" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://localhost:5434/Echange_db?" dbVersionString="V9_X" Port="5434" Username="postgres" Password="CHANGE_ME" ServerName="localhost" DatasourceName="" FileFieldName="" SID="Echange_db" SqlSynthax="" StringQuote="" NullChar="" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="public">
+    <taggedValue xmi:id="_zS0vICFlEfGCUJKYBURdlw" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_zTqcoCFlEfGCUJKYBURdlw" tag="package filter" value=""/>
+    <taggedValue xmi:id="_zT-lsCFlEfGCUJKYBURdlw" tag="Status" value=""/>
+    <taggedValue xmi:id="_zT-lsSFlEfGCUJKYBURdlw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_zT-lsiFlEfGCUJKYBURdlw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_zT-lsyFlEfGCUJKYBURdlw" tag="Description" value=""/>
+    <taggedValue xmi:id="_zT-ltCFlEfGCUJKYBURdlw" tag="Author" value=""/>
+    <taggedValue xmi:id="_zT-ltSFlEfGCUJKYBURdlw" tag="otherParameter"/>
+    <taggedValue xmi:id="_zWK-ECFlEfGCUJKYBURdlw" tag="DB ProductName" value="PostgreSQL"/>
+    <taggedValue xmi:id="_zWK-ESFlEfGCUJKYBURdlw" tag="DB ProductVersion" value="17.4"/>
+    <taggedValue xmi:id="_zWK-EiFlEfGCUJKYBURdlw" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_zS0vISFlEfGCUJKYBURdlw" key="CONN_PARA_KEY_USERNAME" value="postgres"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_zYTFACFlEfGCUJKYBURdlw" name="Echange_db" dataManager="_zSyS4CFlEfGCUJKYBURdlw">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_zYU6MCFlEfGCUJKYBURdlw" name="public"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

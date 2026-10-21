@@ -1,0 +1,17 @@
+# Secrets
+*.env
+**/*password*
+
+# Talend
+**/.settings/
+**/temp/
+**/.Java/
+
+# Power BI
+*.tmp
+.pbi/
+
+# Système
+.DS_Store
+Thumbs.db
+~$*
