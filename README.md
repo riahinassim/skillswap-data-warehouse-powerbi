@@ -19,7 +19,7 @@ L'administrateur de la plateforme veut savoir :
 
 ```
 Base source (PostgreSQL)  →  ETL (Talend)  →  Data warehouse (PostgreSQL)  →  Power BI
-      8 tables                 6 jobs              5 dimensions + 2 faits        Dashboard
+      8 tables           7 jobs + 1 job maître            5 dimensions + 2 faits        Dashboard
 ```
 
 ## Modèle en étoile
