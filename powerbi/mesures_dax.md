@@ -1,10 +1,14 @@
--- 1. Colonne calculée (table 'public dim_temps')
+-- ============================================================
+-- COLONNE CALCULÉE (table 'public dim_temps')
 -- La table doit être marquée comme table de dates.
+-- ============================================================
 
 Date = DATE('public dim_temps'[annee], 'public dim_temps'[mois], 'public dim_temps'[jour])
 
 
--- 2. Cartes KPI
+-- ============================================================
+-- CARTES KPI
+-- ============================================================
 
 -- Carte 1 : Échanges réalisés
 Nb échanges = COUNTROWS('public fact_echanges')
@@ -49,7 +53,7 @@ CALCULATE(
 Ratio O/D global = DIVIDE([Compétences proposées], [Compétences recherchées])
 
 -- Carte 5 : Catalogue jamais échangé
--- Indicateur global : les segments sont désactivés sur cette carte.
+-- Indicateur global : les segments sont désactivés sur cette carte (Modifier les interactions).
 Compétences sans échange =
 COUNTROWS(
     FILTER(
@@ -64,8 +68,11 @@ Part compétences dormantes =
 DIVIDE([Compétences sans échange], [Total compétences catalogue])
 
 
--- 3. Échanges par mois et par année
--- Comparaison 2026 vs 2025 à dates égales, indépendante du segment Période.
+-- ============================================================
+-- VISUEL 1 : ÉCHANGES PAR MOIS ET PAR ANNÉE
+-- Comparaison 2026 vs 2025 à dates égales (jusqu'au jour courant),
+-- indépendante du segment Période.
+-- ============================================================
 
 Échanges 2026 YTD =
 VAR fin = TODAY()
@@ -125,7 +132,9 @@ IF(ISBLANK(m) || ISBLANK(a), "Échanges",
     UPPER(LEFT(m, 1)) & MID(m, 2, 20) & " " & a)
 
 
--- 4. Crédits transférés par mois
+-- ============================================================
+-- VISUEL 2 : CRÉDITS TRANSFÉRÉS PAR MOIS
+-- ============================================================
 
 Crédits transférés = SUM('public fact_echanges'[credits_transferes])
 
@@ -141,9 +150,11 @@ Titre crédits =
 "Les crédits culminent en " & [Mois pic] & " (" & [Crédits mois pic] & " crédits)"
 
 
--- 5. Échanges par quartier
+-- ============================================================
+-- VISUEL 3 : ÉCHANGES PAR QUARTIER
 -- Le total ignore le filtre Top N du visuel pour que les pourcentages restent exacts.
 -- Le titre s'adapte au nombre de quartiers sélectionnés (aucun, un seul, plusieurs).
+-- ============================================================
 
 Top 2 résumé =
 VAR t =
@@ -175,10 +186,12 @@ Pied quartiers =
     & " échanges"
 
 
--- 6. Échanges par compétence (Top 8)
+-- ============================================================
+-- VISUEL 4 : ÉCHANGES PAR COMPÉTENCE (TOP 8)
 -- Le total retire seulement le filtre sur nom_competence (segment Compétence et Top N)
 -- mais conserve Région et Catégorie.
 -- Le titre s'adapte au nombre de compétences affichées.
+-- ============================================================
 
 Compétences actives =
 COUNTROWS(FILTER(ALL('public dim_competences'[nom_competence]), [Nb échanges] > 0))
@@ -220,8 +233,10 @@ SWITCH(
 )
 
 
--- 7. Écart offre - demande par catégorie
+-- ============================================================
+-- VISUEL 5 : ÉCART OFFRE − DEMANDE PAR CATÉGORIE
 -- L'offre et la demande sont un stock : elles ignorent le segment Période.
+-- ============================================================
 
 Écart nb = [Compétences proposées] - [Compétences recherchées]
 
