@@ -180,10 +180,8 @@ SWITCH(
     noms & " : " & FORMAT(DIVIDE(SUMX(top2, [@n]), total), "0%") & " des échanges"
 )
 
-Pied quartiers =
-"Total tous quartiers : "
-    & CALCULATE([Nb échanges], REMOVEFILTERS('public dim_quartiers'))
-    & " échanges"
+Pied quartiers = 
+"Total tous régions : " & CALCULATE([Nb échanges], REMOVEFILTERS('public dim_quartiers')) & " échanges"
 
 
 -- ============================================================
