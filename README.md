@@ -53,7 +53,7 @@ Le dashboard suit une histoire : situation, rythme, territoire, contenu, tension
 | 5 cartes KPI | Échanges réalisés, échanges aboutis, membres actifs, offre pour 1 demande, catalogue jamais échangé |
 | Échanges par mois et par année | Évolution 2026 vs 2025, à dates égales |
 | Crédits transférés par mois | Saisonnalité de l'activité |
-| Échanges par quartier | Répartition géographique |
+| Échanges par région | Répartition géographique |
 | Échanges par compétence | Poids du top 8 |
 | Écart offre − demande par catégorie | Où l'offre manque |
 
